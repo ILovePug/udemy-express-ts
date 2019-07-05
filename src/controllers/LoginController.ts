@@ -7,7 +7,6 @@ class LoginController{
     @get('/login')
     getLogin(req: Request,res: Response):void {
 
-        throw new Error("test error")
         res.send(`
         <form method="POST">
             <div>

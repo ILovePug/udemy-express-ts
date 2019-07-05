@@ -31,4 +31,10 @@ class RootController{
 
         res.send(`im protected info`)
     }
+
+    @get('/error')
+    getTestError(req:Request, res:Response){
+
+        throw new Error("test error")
+    }
 }

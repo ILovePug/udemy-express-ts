@@ -1,5 +1,5 @@
 import 'reflect-metadata'
-import { AppRouter } from '../../AppRouter'
+import { AppRouter } from '../../utili/AppRouter'
 import { Methods } from './Methods'
 import { MetadataKeys } from './MetadataKeys'
 import {Request, Response, RequestHandler, NextFunction } from 'express';
@@ -29,7 +29,7 @@ function errorHandlerWrapper(route: RequestHandler){
         } catch (error) {
             const { url, method, body, params, headers } = req;
             console.log({ url, method, body, params, headers })
-
+            console.log('error end, make sure implement error log')
             next(error);
         }
     }
